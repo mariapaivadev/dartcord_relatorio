@@ -1,19 +1,19 @@
 import 'usuario.dart';
 
-class mensagem {
-  final usuario autor;
+class Mensagem {
+  final Usuario autor;
   final String texto;
 
-  mensagem({this.autor, this.texto});
+  Mensagem(this.autor, this.texto);
 }
 
-class canal {
+class Canal {
   final String nome;
-  final List<mensagem> _mensagens = [];
+  final List<Mensagem> _mensagens = [];
 
-  canal(this.nome);
+  Canal(this.nome);
 
-  void adicionarMensagem(mensagem msg) => _mensagens.add(msg);
+  void adicionarMensagem(Mensagem msg) => _mensagens.add(msg);
 
   void exibirMensagens() {
     print('#$nome');

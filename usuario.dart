@@ -1,11 +1,11 @@
-class usuario {
-  string nick;
+class Usuario {
+  String nick;
   int idade;
   bool ativo = true;
 
-  usuario({required this.nick, required this.idade})
+  Usuario({required this.nick, required this.idade});
 }
 
-class moderador extends usuario {
-  moderador({required super.nick, required super.idade});
+class Moderador extends Usuario {
+  Moderador({required super.nick, required super.idade});
 }

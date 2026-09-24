@@ -53,19 +53,28 @@ void exibirCanal() {
 }
 
 void relatorio() {
-  print('DARTCORD');
+  final nome = ler('Digite o nome do canal para exibir no relatório:');
+  final canal = canais.where((c) => c.nome == nome).firstOrNull;
+
+  print('\nDARTCORD');
   print('Servidor: Programação Mobile');
-  print('Usuários online:');
+
+  print('\nUsuários online:');
   for (final u in usuarios.where((u) => u.ativo)) {
     print(u.nick);
   }
 
-  print('Canais:');
+  print('\nCanais:');
   for (final c in canais) {
     print('#${c.nome}');
   }
-  print('Exibindo mensagens do canal:');
-  exibirCanal();
+
+  print('\nExibindo mensagens do canal:');
+  if (canal == null) {
+    print('Canal não encontrado!');
+  } else {
+    canal.exibirMensagens();
+  }
 }
 
 void menu() {
