@@ -1,8 +1,8 @@
 import 'usuario.dart';
 
 class mensagem {
-  String conteudo;
-  usuario autor;
+  final usuario autor;
+  final String texto;
 
-  mensagem({required this.conteudo, required this.autor});
+  mensagem({this.autor, this.texto});
 }
