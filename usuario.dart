@@ -5,3 +5,7 @@ class usuario {
 
   usuario({required this.nick, required this.idade})
 }
+
+class moderador extends usuario {
+  moderador({required super.nick, required super.idade});
+}
